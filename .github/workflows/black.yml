@@ -1,0 +1,12 @@
+name: Lint - Check files using the black formatter
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    #   - name: Run pre-commit hooks
+    #     uses: pre-commit/action@v3.0.0
+      - uses: actions/checkout@v4
+      - uses: psf/black@stable
